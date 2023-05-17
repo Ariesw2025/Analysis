@@ -1,4 +1,4 @@
-openpyxl==2.6.3
+openpyxl -i https://pypi.douban.com/simple --trust -host=pypi.douban.com
 pandas
 scikit-learn
 plotly
