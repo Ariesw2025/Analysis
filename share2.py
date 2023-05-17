@@ -22,7 +22,7 @@ from urllib.parse import quote,unquote
 # from sentence_transformers import SentenceTransformer
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 # from sklearn.decomposition import PCA
 # from scipy.cluster.hierarchy import dendrogram, linkage
 # from sklearn.metrics.pairwise import cosine_similarity
