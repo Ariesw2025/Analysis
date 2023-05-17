@@ -6,10 +6,9 @@ import numpy as np
 # import plotly.graph_objects as go
 import requests
 from urllib.parse import quote,unquote
-import requests
 import re
 import csv
-from lxml import etree
+# from lxml import etree
 import os
 import time
 import pandas as pd
