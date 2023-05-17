@@ -16,10 +16,10 @@ from PIL import Image
 import io
 # import cv2
 from urllib.parse import quote,unquote
-from sentence_transformers import SentenceTransformer, util
+# from sentence_transformers import SentenceTransformer, util
 from sklearn.manifold import TSNE
 from sklearn.metrics.pairwise import cosine_similarity
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
