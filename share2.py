@@ -18,7 +18,7 @@ import io
 from urllib.parse import quote,unquote
 # from sentence_transformers import SentenceTransformer, util
 # from sklearn.manifold import TSNE
-from sklearn.metrics.pairwise import cosine_similarity
+# from sklearn.metrics.pairwise import cosine_similarity
 # from sentence_transformers import SentenceTransformer
 import pandas as pd
 import numpy as np
