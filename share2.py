@@ -20,8 +20,6 @@ from urllib.parse import quote,unquote
 # from sklearn.manifold import TSNE
 # from sklearn.metrics.pairwise import cosine_similarity
 # from sentence_transformers import SentenceTransformer
-import pandas as pd
-import numpy as np
 # import matplotlib.pyplot as plt
 # from sklearn.decomposition import PCA
 # from scipy.cluster.hierarchy import dendrogram, linkage
@@ -46,6 +44,7 @@ with col1:
 with col2:
     upload_models= st.file_uploader('请上传你需要的产品 xlsx格式')    
 st.write('-----------------------------------')
+
 
 model=pd.read_excel(upload_models,index_col=False)
 model=model.fillna(0)
