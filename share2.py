@@ -50,9 +50,6 @@ st.write('-----------------------------------')
 model=pd.read_csv(upload_models)
 model=model.fillna(0)
 
-st.write(model.columns.values.tolist())
-st.write(type(model["vol_jan_22"][0]))
-
 model['price']= model[title]/model[title.replace('val','vol')]
 model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
                                                          ('2)3000 < 5000' if x>3000 and x<=5000 else
@@ -60,21 +57,14 @@ model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
                                                          ('4)7000 < 10000' if x>7000 and x<=10000 else
                                                          ('5)10000 < 15000' if x>10000 and x<=15000 else
                                                          ('6)>= 15000' if x>15000 else ''))))))
-
-
 mid=model['price']   #取备注列的值
 model.pop('price')  #删除备注列
 model.insert(5,'price',mid) #插入备注列
 model=model.fillna(0)
+st.write(model)
 
 models=model
 models.loc[:,'vol_jan_22':'vol_dec_22']=models.loc[:,'vol_jan_22':'vol_dec_22'].astype('float')
-
-for i in models.loc[:,'vol_jan_22':'vol_dec_22'].columns.values.tolist():
-    models['YTD_'+i]=1
-
-
-st.write(models['val_jan_23'].values.tolist())
 
 for i in models.loc[:,'vol_jan_22':'vol_dec_22'].columns.values.tolist():
     models['YTD_'+i]=models.loc[:,'vol_jan_22':i].sum(axis=1)
