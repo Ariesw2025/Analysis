@@ -1,10 +1,10 @@
 scipy
 matplotlib
 numpy
-xlrd >= 1.0.0
+xlrd
 pandas
 streamlit
-openpyxl
+openpyxl==3.0.7
 scikit-learn
 plotly
 streamlit
