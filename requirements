@@ -1,6 +1,7 @@
 scipy
 matplotlib
 numpy
+xlrd >= 1.0.0
 pandas
 streamlit
 openpyxl
