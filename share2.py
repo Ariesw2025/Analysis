@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from io import StringIO
 import numpy as np
-import openpyxl
+# import openpyxl
 # import plotly.express as px
 # import plotly.graph_objects as go
 import requests
