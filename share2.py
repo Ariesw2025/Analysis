@@ -54,6 +54,8 @@ st.write(model)
 model.loc[:,'vol_jan_22':'vol_dec_22']=model.loc[:,'vol_jan_22':'vol_dec_22'].astype('float')
 model=model.fillna(0)
 
+model['test'] = models['vol_jan_22'] + models['vol_feb_22']
+
 model['price']= model[title]/model[title.replace('val','vol')]
 model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
                                                          ('2)3000 < 5000' if x>3000 and x<=5000 else
@@ -68,7 +70,9 @@ model=model.fillna(0)
 st.write(model)
 
 models=model
-models.loc[:,'vol_jan_22':'vol_dec_22']=models.loc[:,'vol_jan_22':'vol_dec_22'].astype('float')
+models.loc[:,'vol_jan_22':'vol_dec_22'] = models.loc[:,'vol_jan_22':'vol_dec_22'].astype('float')
+
+
 
 for i in models.loc[:,'vol_jan_22':'vol_dec_22'].columns.values.tolist():
     models['YTD_'+i]=models.loc[:,'vol_jan_22':i].sum(axis=1)
