@@ -65,7 +65,7 @@ model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
 mid=model['price']   #取备注列的值
 model.pop('price')  #删除备注列
 model.insert(5,'price',mid) #插入备注列
-
+model=model.fillna(0)
 
 models=model
 
