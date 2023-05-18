@@ -47,7 +47,10 @@ with col2:
 st.write('-----------------------------------')
 
 
-model=pd.read_csv(upload_models)
+model2=pd.read_csv(upload_models)
+model=pd.read_csv(upload_models, skiprows=[0])
+
+model.columns=model2.columns.values.tolist()
 model=model.fillna(0)
 
 model['price']= model[title]/model[title.replace('val','vol')]
@@ -56,7 +59,7 @@ model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
                                                          ('3)5000 < 7000' if x>5000 and x<=7000 else
                                                          ('4)7000 < 10000' if x>7000 and x<=10000 else
                                                          ('5)10000 < 15000' if x>10000 and x<=15000 else
-                                                         ('6)>= 15000' if x>15000 else ''))))))
+                                                         ('6)>15000' if x>15000 else ''))))))
 mid=model['price']   #取备注列的值
 model.pop('price')  #删除备注列
 model.insert(5,'price',mid) #插入备注列
