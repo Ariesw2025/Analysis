@@ -51,6 +51,7 @@ model=pd.read_csv(upload_models)
 model=model.fillna(0)
 
 st.write(model.columns)
+st.write(model['Height(cm)'])
 
 
 model['price']= model[title]/model[title.replace('val','vol')]
