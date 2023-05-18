@@ -68,7 +68,11 @@ model.insert(5,'price',mid) #插入备注列
 model=model.fillna(0)
 
 models=model
-models=models.astype('float')
+
+for i in models.loc[:,'vol_jan_22':'vol_dec_22'].columns.values.tolist():
+    models['YTD_'+i]=1
+
+
 st.write(models['val_jan_23'].values.tolist())
 
 for i in models.loc[:,'vol_jan_22':'vol_dec_22'].columns.values.tolist():
