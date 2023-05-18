@@ -1,9 +1,8 @@
-openpyxl
-scipy
-matplotlib
-numpy
 xlrd
 xlsxwriter
+openpyxl
+scipy
+numpy
 pandas
 streamlit
 scikit-learn
