@@ -47,7 +47,7 @@ with col2:
 st.write('-----------------------------------')
 
 
-model=pd.read_pd.read_csv(upload_models)
+model=pd.read_csv(upload_models)
 model=model.fillna(0)
 
 # st.write(model['vol_jan_22')
