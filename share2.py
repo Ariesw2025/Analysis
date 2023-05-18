@@ -72,7 +72,7 @@ model=model.fillna(0)
 st.write(model)
 
 models=model
-st.write(models['val_jan_23'], models['val_dec_23'])
+st.write(models['val_jan_23'].values.tolist(), models['val_dec_23'].values.tolist())
 models['test'] = models['val_jan_23'] + models['val_dec_23']
 
 
