@@ -102,7 +102,7 @@ ytds_val=['YTD_val_jan_22','YTD_val_feb_22','YTD_val_mar_22','YTD_val_apr_22','Y
 month_combine_vol=['vol_jan_23','vol_feb_23','vol_mar_23','vol_apr_23','vol_may_23','vol_jun_23','vol_jul_23','vol_aug_23','vol_sep_23','vol_oct_23','vol_nov_23','vol_dec_23',]
 month_combine_val=['val_jan_23','val_feb_23','val_mar_23','val_apr_23','val_may_23','val_jun_23','val_jul_23','val_aug_23','val_sep_23','val_oct_23','val_nov_23','val_dec_23',]
 
-markets=['offline channel','Model','price','region','city_tier']
+markets=['offline channel','Type','Model','price','region','city_tier']
 products=['Brand']
 
 col1, col2, col3, col4, col5, col6 = st.columns(6, gap='large')
