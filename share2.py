@@ -49,9 +49,9 @@ st.write('-----------------------------------')
 
 # model2=pd.read_csv(upload_models)
 model=pd.read_csv(upload_models)
-st.write(model.loc[:0,:])
+st.write(model)
 
-model.columns=model2.columns.values.tolist()
+models.loc[:,'vol_jan_22':'vol_dec_22']=models.loc[:,'vol_jan_22':'vol_dec_22'].astype('float')
 model=model.fillna(0)
 
 model['price']= model[title]/model[title.replace('val','vol')]
