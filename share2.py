@@ -52,6 +52,7 @@ model=model.fillna(0)
 
 st.write(model.columns)
 st.write(model['Height(cm)'])
+st.write(model['vol_jan_22']
 
 
 model['price']= model[title]/model[title.replace('val','vol')]
