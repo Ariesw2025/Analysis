@@ -50,7 +50,8 @@ st.write('-----------------------------------')
 model=pd.read_csv(upload_models)
 model=model.fillna(0)
 
-st.write(model.columns)
+st.write(title)
+
 
 model['price']= model[title]/model[title.replace('val','vol')]
 model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
