@@ -50,6 +50,8 @@ st.write('-----------------------------------')
 model=pd.read_csv(upload_models)
 model=model.fillna(0)
 
+st.write(model.type())
+st.write(model)
 st.write(model['val_mar_23'])
 
 
