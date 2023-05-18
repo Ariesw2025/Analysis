@@ -58,12 +58,13 @@ model.loc[:,'vol_jan_22':'vol_dec_22']=model.loc[:,'vol_jan_22':'vol_dec_22'].as
 model['test'] = model['vol_jan_22'] + model['vol_feb_22']
 
 model['price']= model[title]/model[title.replace('val','vol')]
-model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
-                                                         ('2)3000 < 5000' if x>3000 and x<=5000 else
-                                                         ('3)5000 < 7000' if x>5000 and x<=7000 else
-                                                         ('4)7000 < 10000' if x>7000 and x<=10000 else
-                                                         ('5)10000 < 15000' if x>10000 and x<=15000 else
-                                                         ('6)>15000' if x>15000 else ''))))))
+
+# model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
+#                                                          ('2)3000 < 5000' if x>3000 and x<=5000 else
+#                                                          ('3)5000 < 7000' if x>5000 and x<=7000 else
+#                                                          ('4)7000 < 10000' if x>7000 and x<=10000 else
+#                                                          ('5)10000 < 15000' if x>10000 and x<=15000 else
+#                                                          ('6)>15000' if x>15000 else ''))))))
 mid=model['price']   #取备注列的值
 model.pop('price')  #删除备注列
 model.insert(5,'price',mid) #插入备注列
