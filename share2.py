@@ -43,7 +43,7 @@ col1, col2 = st.columns([2,2])
 with col1:
     title = st.radio('请选择月份', ['val_jan_23','val_feb_23','val_mar_23','val_apr_23','val_may_23','val_jun_23','val_jul_23','val_aug_23','val_sep_23','val_oct_23','val_nov_23','val_dec_23'],horizontal=True)
 with col2:
-    upload_models= st.file_uploader('请上传你需要的产品 xlsx格式')    
+    upload_models= st.file_uploader('请上传你需要的产品 xlsx格式',type=['xlsx')    
 st.write('-----------------------------------')
 
 
