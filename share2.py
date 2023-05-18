@@ -50,7 +50,7 @@ st.write('-----------------------------------')
 model=pd.read_csv(upload_models)
 model=model.fillna(0)
 
-st.write(title)
+st.write(model['val_mar_23'])
 
 
 model['price']= model[title]/model[title.replace('val','vol')]
