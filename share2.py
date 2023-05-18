@@ -219,8 +219,9 @@ for f in fact:
 
         table_share_chg_output=table_share[period_new_forshrchg]
 
-st.subheader('Crosstable _ Sales Value')
-st.dataframe(table_sales_output)
+if fact.count('vol') or fact.count('val):
+    st.subheader('Crosstable _ Sales Value')
+    st.dataframe(table_sales_output)
 st.subheader('Crosstable _ Value Share')
 st.dataframe(table_share_output)
 st.subheader('Crosstable _ +/- Value Share')
