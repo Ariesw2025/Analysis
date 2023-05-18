@@ -51,10 +51,10 @@ st.write('-----------------------------------')
 model=pd.read_csv(upload_models)
 st.write(model)
 
-model.loc[:,'vol_jan_22':'vol_dec_22']=model.loc[:,'vol_jan_22':'vol_dec_22'].astype('float')
+model.loc[:,'vol_jan_22':'vol_dec_22']=model.loc[:,'vol_jan_22':'vol_dec_22'].astype('int')
 model=model.fillna(0)
 
-model['test'] = models['vol_jan_22'] + models['vol_feb_22']
+model['test'] = model['vol_jan_22'] + model['vol_feb_22']
 
 model['price']= model[title]/model[title.replace('val','vol')]
 model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
