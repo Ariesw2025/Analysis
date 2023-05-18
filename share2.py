@@ -47,7 +47,7 @@ with col2:
 st.write('-----------------------------------')
 
 
-model2=pd.read_csv(upload_models)
+# model2=pd.read_csv(upload_models)
 model=pd.read_csv(upload_models)
 st.write(model.loc[:0,:])
 
