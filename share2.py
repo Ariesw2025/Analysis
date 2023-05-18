@@ -55,16 +55,16 @@ model=model.fillna(0)
 model.loc[:,'vol_jan_22':'vol_dec_22']=model.loc[:,'vol_jan_22':'vol_dec_22'].astype('int')
 
 
-model['test'] = model['vol_jan_22'] + model['vol_feb_22']
+# model['test'] = model['vol_jan_22'] + model['vol_feb_22']
 
-model['price']= model[title]/model[title.replace('val','vol')]
+model['price']= model[title]/model[title.replace('val','vol')].astype('int')
 
-# model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
-#                                                          ('2)3000 < 5000' if x>3000 and x<=5000 else
-#                                                          ('3)5000 < 7000' if x>5000 and x<=7000 else
-#                                                          ('4)7000 < 10000' if x>7000 and x<=10000 else
-#                                                          ('5)10000 < 15000' if x>10000 and x<=15000 else
-#                                                          ('6)>15000' if x>15000 else ''))))))
+model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
+                                                         ('2)3000 < 5000' if x>3000 and x<=5000 else
+                                                         ('3)5000 < 7000' if x>5000 and x<=7000 else
+                                                         ('4)7000 < 10000' if x>7000 and x<=10000 else
+                                                         ('5)10000 < 15000' if x>10000 and x<=15000 else
+                                                         ('6)>15000' if x>15000 else ''))))))
 mid=model['price']   #取备注列的值
 model.pop('price')  #删除备注列
 model.insert(5,'price',mid) #插入备注列
@@ -72,8 +72,7 @@ model=model.fillna(0)
 st.write(model)
 
 models=model
-models.loc[:,'vol_jan_22':'vol_dec_22'] = models.loc[:,'vol_jan_22':'vol_dec_22'].astype('int')
-
+models['test'] = models['val_jan_23'] + models['val_dec_23']
 
 
 for i in models.loc[:,'vol_jan_22':'vol_dec_22'].columns.values.tolist():
@@ -88,6 +87,8 @@ for i in models.loc[:,'vol_jan_23':'vol_dec_23'].columns.values.tolist():
 for i in models.loc[:,'val_jan_23':'val_dec_23'].columns.values.tolist():
     models['YTD_'+i]=models.loc[:,'val_jan_23':i].sum(axis=1)
 
+    
+    
 facts=['vol','val','vol_share','val_share','+/- vol_share','+/- val_share']
 months_vol=['vol_jan_22','vol_feb_22','vol_mar_22','vol_apr_22','vol_may_22','vol_jun_22','vol_jul_22','vol_aug_22','vol_sep_22','vol_oct_22','vol_nov_22','vol_dec_22',
             'vol_jan_23','vol_feb_23','vol_mar_23','vol_apr_23','vol_may_23','vol_jun_23','vol_jul_23','vol_aug_23','vol_sep_23','vol_oct_23','vol_nov_23','vol_dec_23',]
