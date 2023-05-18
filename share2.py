@@ -51,9 +51,7 @@ model=pd.read_csv(upload_models)
 model=model.fillna(0)
 
 st.write(model.columns.values.tolist())
-st.write(model['Height(cm)'])
-st.write(model[" vol_jan_22 "])
-
+st.write(model["vol_jan_22"])
 
 model['price']= model[title]/model[title.replace('val','vol')]
 model['price']=model['price'].apply(lambda x : '1)<3000' if x<=3000 else
