@@ -1,0 +1,12 @@
+scipy
+matplotlib
+numpy
+xlrd
+xlsxwriter
+pandas
+streamlit
+openpyxl==3.0.7
+scikit-learn
+plotly
+matplotlib
+hypertools
