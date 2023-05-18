@@ -70,7 +70,7 @@ model=model.fillna(0)
 st.write(model)
 
 models=model
-models.loc[:,'vol_jan_22':'vol_dec_22'] = models.loc[:,'vol_jan_22':'vol_dec_22'].astype('float')
+models.loc[:,'vol_jan_22':'vol_dec_22'] = models.loc[:,'vol_jan_22':'vol_dec_22'].astype('int')
 
 
 
