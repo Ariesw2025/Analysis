@@ -48,7 +48,8 @@ st.write('-----------------------------------')
 
 
 model2=pd.read_csv(upload_models)
-model=pd.read_csv(upload_models, skiprows=0)
+model=pd.read_csv(upload_models)
+st.write(model.loc[:0,:])
 
 model.columns=model2.columns.values.tolist()
 model=model.fillna(0)
