@@ -224,6 +224,6 @@ st.dataframe(table_sales_output)
 st.subheader('Crosstable _ Value Share')
 st.dataframe(table_share_output)
 st.subheader('Crosstable _ +/- Value Share')
-st.dataframe(table_share_chg_output.round(2)
+st.dataframe(table_share_chg_output.round(2))
 
 
