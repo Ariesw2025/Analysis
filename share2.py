@@ -52,7 +52,7 @@ model=pd.read_csv(upload_models)
 st.write(model)
 model=model.fillna(0)
 
-model.loc[:,'vol_jan_22':'vol_dec_22']=model.loc[:,'vol_jan_22':'vol_dec_22'].astype('float64')
+model.loc[:,'vol_jan_22':'vol_dec_22']=model.loc[:,'vol_jan_22':'vol_dec_22'].astype('int')
 
 
 model['test'] = model['vol_jan_22'] + model['vol_feb_22']
@@ -71,7 +71,7 @@ model=model.fillna(0)
 st.write(model)
 
 models=model
-models.loc[:,'vol_jan_22':'vol_dec_22'] = models.loc[:,'vol_jan_22':'vol_dec_22'].astype('float64')
+models.loc[:,'vol_jan_22':'vol_dec_22'] = models.loc[:,'vol_jan_22':'vol_dec_22'].astype('int')
 
 
 
