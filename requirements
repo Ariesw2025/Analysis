@@ -1,4 +1,4 @@
-openpyxl -i https://pypi.douban.com/simple --trust -host=pypi.douban.com
+openpyxl
 pandas
 scikit-learn
 plotly
